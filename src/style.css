@@ -19,7 +19,7 @@ header{
   background-color: #eeeefc;
   border: none;
   border-radius: 6px;
-  color: #201d1d;
+  color: #221e1e;
   font-size: 16px;
   padding: 15px 20px;
   width: 80%;
@@ -39,13 +39,58 @@ main{
   padding: 30px 0;
 }
 
+.clima-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.clima-city{
+  color: #221e1e;
+  font-size: 45px;
+  line-height: 48px;
+  margin: 0;
+}
+
+.clima-details{
+  color: rgba(39, 33, 64, 0.4);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.clima-details strong{
+  color: #e07777;
+}
+
+.temp-display{
+  display: flex;
+}
+
+.temp-icon{
+  font-size: 44px;
+  margin-top: 26px;
+}
+
+.temp-value{
+  font-weight: bolder;
+  font-size: 88px;
+  line-height: 88px;
+  margin-left: 5px;
+}
+
+.temp-unit{
+  font-size: 28px;
+  line-height: 30px;
+  margin-top: 12px;
+}
+
 a{
   color: #613098;
 }
 
 footer{
   border-top: 1px solid #eeeefc;
-  color:  rgba(0, 0, 0, 0.6);;
+  color:  rgba(0, 0, 0, 0.6);
   font-size: 14px;
   padding-top: 30px;
   text-align: center;

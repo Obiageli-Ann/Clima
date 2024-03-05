@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuevo Clima App</title>
-</head>
-<body>
-  <header>
-<form>
-  <input type="search" placeholder="Type a city name..." required>
-  <input type="button" value="Search">
-</form>
-  </header>
-  <main>
-  <div>
-  <div>
-  <h1>Paris</h1>
-  <p>Monday 13:42, clear sky <br>
-Humidity: 56%, Wind: 4.63km/h
-</p>
-</div>
-<div>
-  🌧️10°C
-</div>
-</div>
-</main>
-  <footer>
-    This project was coded by Ann Oby is open-sourced on GitHub hosted on Render
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nuevo Clima App</title>
+  </head>
+  <body>
+    <div class="clima-container">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Type a city name..."
+            required
+            class="search-form"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <div>
+            <h1>Paris</h1>
+            <p>
+              Monday 13:42, clear sky <br />
+              Humidity: 56%, Wind: 4.63km/h
+            </p>
+          </div>
+          <div>🌧️10°C</div>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Obiageli-Ann/" target="_blank">Ann Oby</a>,
+        is open-sourced on
+        <a href="https://github.com/Obiageli-Ann/Clima/tree/main"target="_blank">
+        GitHub
+        </a>
+        hosted on
+        <a href="https://nuevo-clima-app.onrender.com" target="_blank">
+        Render
+        </a>
+      </footer>
+    </div>
+  </body>
 </html>

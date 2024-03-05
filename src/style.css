@@ -1,0 +1,52 @@
+body{
+  background-color: #eeeefc;
+  font-family: "Ubuntu", sans-serif;
+}
+.clima-container{
+  background-color: #fffafa;
+  border-radius: 10px;
+  box-shadow:0 30px 50px rgba(65, 50, 100, 0.08);
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+}
+header{
+  border-bottom: 1px solid #eeeefc;
+  padding-bottom: 30px;
+}
+
+.search-form{
+  background-color: #eeeefc;
+  border: none;
+  border-radius: 6px;
+  color: #201d1d;
+  font-size: 16px;
+  padding: 15px 20px;
+  width: 80%;
+}
+
+.search-button{
+  background-color: #613098;
+  border: none;
+  border-radius: 6px;
+  color: #fffafa;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 15px 30px;
+}
+
+main{
+  padding: 30px 0;
+}
+
+a{
+  color: #613098;
+}
+
+footer{
+  border-top: 1px solid #eeeefc;
+  color:  rgba(0, 0, 0, 0.6);;
+  font-size: 14px;
+  padding-top: 30px;
+  text-align: center;
+}

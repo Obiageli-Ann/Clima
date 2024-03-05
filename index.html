@@ -15,12 +15,13 @@
   <body>
     <div class="clima-container">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="search"
             placeholder="Type a city name..."
             required
             class="search-form"
+            id="input-form"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -28,7 +29,7 @@
       <main>
         <div class="clima-info">
           <div>
-            <h1 class="clima-city">Paris</h1>
+            <h1 class="clima-city" id="city">Paris</h1>
             <p class="clima-details">
               Monday 13:42, clear sky <br />
               Humidity: <strong>56%</strong>, Wind: <strong>4.63km/h</strong>
@@ -48,5 +49,6 @@
         </a>
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>

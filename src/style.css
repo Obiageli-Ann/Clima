@@ -68,14 +68,12 @@ main{
 
 .temp-icon{
   font-size: 44px;
-  margin-top: 26px;
 }
 
 .temp-value{
   font-weight: bolder;
   font-size: 88px;
   line-height: 88px;
-  margin-left: 5px;
 }
 
 .temp-unit{

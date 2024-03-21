@@ -38,9 +38,9 @@ function currentDate(date) {
   ];
 
   let day = days[date.getDay()];
-//i was never sure this is going to work, self findings☺️☺️☺️
-  if (hour < 10 || minutes < 10) {
-   hour = `0${hour}`; minutes = `0${minutes}`;
+
+  if (minutes < 10) {
+  minutes = `0${minutes}`;
   }
 
   return `${day} ${hour}:${minutes}`;
@@ -53,7 +53,35 @@ function handleSearchSubmit(event) {
   searchCity(inputForm.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHtml = " ";
+
+  days.forEach(day => {
+    
+
+forecastHtml =
+  forecastHtml +
+  `<div class="days">
+            <div class="date">${day}</div>
+            
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="32">
+             <div class="forecast-temp">
+                <span class="forecast-temp-max"> <strong>18º
+</strong></span>
+                <span class="forecast-temp-min"> 12º</span>
+              </div>
+          </div>
+          `;
+  });       
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Abuja");
+displayForecast();

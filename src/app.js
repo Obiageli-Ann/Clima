@@ -16,7 +16,8 @@ function weatherUpdate(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = currentDate(date);
   iconElement.innerHTML = `<img src=${response.data.condition.icon_url} alt="Weather Icon" />`;
-  
+
+  getForecast("Abuja");
 }
 
 function searchCity(city) {
@@ -53,30 +54,40 @@ function handleSearchSubmit(event) {
   searchCity(inputForm.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function formatDay(timeStamp) {
+  let date = new Date(timeStamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+function getForecast(city) {
+    let apiKey = "9f0940fbf3ca3obdd306d133a0041aft";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(displayForecast);
+}
 
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+function displayForecast(response) {
   let forecastHtml = " ";
 
-  days.forEach(day => {
-    
+  response.data.daily.forEach((day,index) => {
+    if (index < 5) {
 
 forecastHtml =
   forecastHtml +
   `<div class="days">
-            <div class="date">${day}</div>
+            <div class="date">${formatDay(day.time)}</div>
             
-              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="32">
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="62" />
              <div class="forecast-temp">
-                <span class="forecast-temp-max"> <strong>18º
+                <span class="forecast-temp-max"> <strong>${Math.round(day.temperature.maximum)}º
 </strong></span>
-                <span class="forecast-temp-min"> 12º</span>
+                <span class="forecast-temp-min">${Math.round(day.temperature.minimum)}º</span>
               </div>
           </div>
           `;
+    }
   });       
 
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -84,4 +95,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Abuja");
-displayForecast();

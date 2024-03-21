@@ -76,7 +76,7 @@ forecastHtml =
   `<div class="days">
             <div class="date">${formatDay(day.time)}</div>
             
-              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="62" />
+              <img src="${day.condition.icon_url}" width="62"  />
              <div class="forecast-temp">
                 <span class="forecast-temp-max"> <strong>${Math.round(day.temperature.maximum)}º
 </strong></span>
